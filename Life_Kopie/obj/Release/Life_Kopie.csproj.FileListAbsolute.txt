@@ -1,0 +1,8 @@
+C:\Users\M_Wb\Desktop\C#_Projekte\Life_Kopie\Life_Kopie\bin\Release\Life_Kopie.exe.config
+C:\Users\M_Wb\Desktop\C#_Projekte\Life_Kopie\Life_Kopie\bin\Release\Life_Kopie.exe
+C:\Users\M_Wb\Desktop\C#_Projekte\Life_Kopie\Life_Kopie\bin\Release\Life_Kopie.pdb
+C:\Users\M_Wb\Desktop\C#_Projekte\Life_Kopie\Life_Kopie\obj\Release\Life_Kopie.Form1.resources
+C:\Users\M_Wb\Desktop\C#_Projekte\Life_Kopie\Life_Kopie\obj\Release\Life_Kopie.Properties.Resources.resources
+C:\Users\M_Wb\Desktop\C#_Projekte\Life_Kopie\Life_Kopie\obj\Release\Life_Kopie.csproj.GenerateResource.Cache
+C:\Users\M_Wb\Desktop\C#_Projekte\Life_Kopie\Life_Kopie\obj\Release\Life_Kopie.exe
+C:\Users\M_Wb\Desktop\C#_Projekte\Life_Kopie\Life_Kopie\obj\Release\Life_Kopie.pdb
