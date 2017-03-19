@@ -34,11 +34,15 @@ namespace Life_Kopie
 
         Panel Spielfeld = new Panel();
         Panel Steuerung = new Panel();
+        Panel Figuren = new Panel();
         Panel Gleiter = new Panel();
         Panel U = new Panel();
         Panel Oktagon = new Panel();
 
         Label lblCounter = new Label();
+        Label lblStart_Erklaerung = new Label();
+        Label lblNeu_Erklaerung = new Label();
+        Label lblFiguren_Erklaerung = new Label();
 
         Button btnStart = new Button();
         Button btnNeu = new Button();
@@ -56,12 +60,12 @@ namespace Life_Kopie
             Zellen_erstellen();
             
             //Buttons auf Panel "Steuerung" positionieren
-            btnStart.Location   = new Point(20, 0);
+            btnStart.Location   = new Point(0, 0);
             btnStart.Size       = new Size(51, 23);
             btnStart.Text       = "Start";
             Steuerung.Controls.Add(btnStart);
 
-            btnNeu.Location    = new Point(20, 31);
+            btnNeu.Location    = new Point(0, 30);
             btnNeu.Size        = new Size(51, 23);
             btnNeu.Text        = "Neu";
             Steuerung.Controls.Add(btnNeu);
@@ -283,18 +287,39 @@ namespace Life_Kopie
         //Spielfelder und Zellen erstellen
         private void Spielfeld_erstellen()
         {
+            this.Controls.Add(Steuerung);
+            Steuerung.Location = new Point(20, 20); //Startpunkt links oben
+            Steuerung.Size = new Size(600, 60);
+            Steuerung.Visible = true;
+
             this.Controls.Add(Spielfeld);
-            Spielfeld.Location = new Point(20, 20); //Startpunkt links oben
+            Spielfeld.Location = new Point(20, 90); //Startpunkt links oben
+            Spielfeld.Size = new Size(zelle_breite * reihen, zelle_breite * spalten);
+            Spielfeld.Visible = true;
+            
+            this.Controls.Add(Figuren);
+            Figuren.Location = new Point(340, 90); //Startpunkt links oben
+            Figuren.Size = new Size(200, 30);
+            Figuren.Visible = true;
+
             lblCounter.Location = new Point(0, 0);
             lblCounter.AutoSize = true;
             Spielfeld.Controls.Add(lblCounter);
-            Spielfeld.Size = new Size(zelle_breite * reihen, zelle_breite * spalten);
-            Spielfeld.Visible = true;
 
-            this.Controls.Add(Steuerung);
-            Steuerung.Location = new Point(400, 20); //Startpunkt links oben
-            Steuerung.Size = new Size(200,200);
-            Steuerung.Visible = true;
+            lblStart_Erklaerung.Location = new Point(70,0);
+            lblStart_Erklaerung.AutoSize = true;
+            lblStart_Erklaerung.Text = "Klick: Sobald im Spielfeld Felder ausgewählt sind, starten die Lebenszyklen. \nDanach kann mit dem Button pausiert werden.";
+            Steuerung.Controls.Add(lblStart_Erklaerung);
+
+            lblNeu_Erklaerung.Location = new Point(70, 30);
+            lblNeu_Erklaerung.AutoSize = true;
+            lblNeu_Erklaerung.Text = "Klick: Das Spielfeld wird geleert und der Zähler auf Null zurückgesetzt.";
+            Steuerung.Controls.Add(lblNeu_Erklaerung);
+            
+            lblFiguren_Erklaerung.Location = new Point(0, 0);
+            lblFiguren_Erklaerung.AutoSize = true;
+            lblFiguren_Erklaerung.Text = "Mögliche Figuren mit interessanten \nLebenszyklen.";
+            Figuren.Controls.Add(lblFiguren_Erklaerung);
         }
 
         private void Zellen_erstellen()
@@ -320,7 +345,7 @@ namespace Life_Kopie
         private void U_erstellen()
         {
             this.Controls.Add(U);
-            U.Location = new Point(340, 185);
+            U.Location = new Point(340, 240);
             U.Size = new Size(zelle_breite * 3, zelle_hoehe * 7);
             U.Visible = true;
 
@@ -364,7 +389,7 @@ namespace Life_Kopie
         private void Gleiter_erstellen()
         {
             this.Controls.Add(Gleiter);
-            Gleiter.Location = new Point(340, 125);
+            Gleiter.Location = new Point(445, 135);
             Gleiter.Size = new Size(zelle_breite * 3, zelle_hoehe * 3);
             Gleiter.Visible = true;
 
@@ -397,7 +422,7 @@ namespace Life_Kopie
         private void Oktagon_erstellen()
         {
             this.Controls.Add(Oktagon);
-            Oktagon.Location = new Point(340, 20);
+            Oktagon.Location = new Point(340, 135);
             Oktagon.Size = new Size(zelle_breite * 6, zelle_hoehe * 6);
             Oktagon.Visible = true;
 
